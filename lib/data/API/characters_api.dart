@@ -9,7 +9,7 @@ class CharactersApi {
     BaseOptions options = BaseOptions(
       baseUrl: baseUrl,
       receiveDataWhenStatusError: true,
-      connectTimeout: Duration(seconds: 20), // 60 seconds,
+      connectTimeout: Duration(seconds: 20),
       receiveTimeout: Duration(seconds: 20),
     );
 
