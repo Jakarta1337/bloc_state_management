@@ -7,12 +7,11 @@ import '../../data/repository/characters_repository.dart';
 
 part 'character_state.dart';
 
-class CharacterCubit extends Cubit<CharacterState> {
+class CharactersCubit extends Cubit<CharactersState> {
   final CharactersRepository charactersRepository;
-  List<Character> characters;
+  List<Character> characters = [];
 
-  CharacterCubit(this.charactersRepository, this.characters)
-    : super(CharacterInitial());
+  CharactersCubit(this.charactersRepository) : super(CharacterInitial());
 
   List<Character> getAllCharacters() {
     charactersRepository.getAllCharacters().then((characters) {
