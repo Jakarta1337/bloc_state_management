@@ -11,6 +11,7 @@ class CharacterScreen extends StatefulWidget {
   const CharacterScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CharacterScreenState createState() => _CharacterScreenState();
 }
 
@@ -20,8 +21,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
   @override
   void initState() {
     super.initState();
-    allCharacters =
-        BlocProvider.of<CharactersCubit>(context).getAllCharacters();
+    BlocProvider.of<CharactersCubit>(context).getAllCharacters();
   }
 
   @override
